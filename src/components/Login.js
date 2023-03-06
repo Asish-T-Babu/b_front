@@ -45,7 +45,7 @@ export default function Login() {
         e.preventDefault()
         let details = {username,password}
         console.log('ki',username,password);
-        let response = await fetch('http://localhost:8000/token',{
+        let response = await fetch('https://brosapp.xyz/token',{
       
         method: 'POST',
         headers: {

@@ -39,7 +39,7 @@ function AddBatchModal() {
       },
     });
   const handleSubmits=()=>{
-    axios.post('http://127.0.0.1:8000/register_batch/',{
+    axios.post('https://brosapp.xyz/register_batch/',{
       batch:addBatch,
       batch_advisor:batchAdvisor,
       location:batchLocation
