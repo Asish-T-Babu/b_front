@@ -34,12 +34,12 @@ function BookReviewerSlotModal({data}) {
   const [select, setSelect] = React.useState([]);
   
   let {authTokens}=useContext(AuthContext)
-    const authAxios = axios.create({
-      baseURL:'https://brosapp.xyz',
-      headers:{
-        Authorization:`Bearer ${authTokens.access}`
-      },
-    });
+    // const authAxios = axios.create({
+    //   baseURL:'https://brosapp.xyz',
+    //   headers:{
+    //     Authorization:`Bearer ${authTokens.access}`
+    //   },
+    // });
   const handleSubmits=()=>{
     axios.put(`https://brosapp.xyz/book_time/${id}/${a}`,{
       whoBook:jwt_decode(authTokens.access).user_id,
