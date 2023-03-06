@@ -36,7 +36,7 @@ function AdvisorDeleteModal(props) {
 //     });
 const handleSubmit=(e)=>{
     e.preventDefault()
-    axios.delete(`http://127.0.0.1:8000/advisor_delete/${props.data.id}`).then((response)=>{
+    axios.delete(`https://brosapp.xyz/advisor_delete/${props.data.id}`).then((response)=>{
       console.log(response.data)
       setAdvisorDeleteModalBoolean(!(advisorDeleteModalBoolean))
     }).catch((error)=>{

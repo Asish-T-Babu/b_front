@@ -37,7 +37,7 @@ function ReviewerDeleteModal(props) {
     
   const handleSubmit=(e)=>{
     e.preventDefault()
-    axios.delete(`http://127.0.0.1:8000/reviewer_delete/${props.data.id}`).then((response)=>{
+    axios.delete(`https://brosapp.xyz/reviewer_delete/${props.data.id}`).then((response)=>{
       console.log(response.data)
       setReviewerDeleteModalBoolean(!(reviewerDeleteModalBoolean))
     }).catch((error)=>{

@@ -20,7 +20,7 @@ export default function Advisor_view() {
     const[advisor,setAdvisor]=React.useState([])
   const {advisorDeleteModalBoolean,addAdmin,setAddAdmin} = useContext(PostContext)
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/view_advisor').then((response)=>{
+        axios.get('https://brosapp.xyz/view_advisor').then((response)=>{
           setAdvisor(response.data)
         })
     },[advisorDeleteModalBoolean,addAdmin])

@@ -35,13 +35,13 @@ function BookReviewerSlotModal({data}) {
   
   let {authTokens}=useContext(AuthContext)
     const authAxios = axios.create({
-      baseURL:'http://127.0.0.1:8000',
+      baseURL:'https://brosapp.xyz',
       headers:{
         Authorization:`Bearer ${authTokens.access}`
       },
     });
   const handleSubmits=()=>{
-    axios.put(`http://127.0.0.1:8000/book_time/${id}/${a}`,{
+    axios.put(`https://brosapp.xyz/book_time/${id}/${a}`,{
       whoBook:jwt_decode(authTokens.access).user_id,
     })
     .then((response)=>{

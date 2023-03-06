@@ -32,13 +32,13 @@ function AddDomainModal() {
   
   let {authTokens}=useContext(AuthContext)
     const authAxios = axios.create({
-      baseURL:'http://127.0.0.1:8000',
+      baseURL:'https://brosapp.xyz',
       headers:{
         Authorization:`Bearer ${authTokens.access}`
       },
     });
   const handleSubmits=()=>{
-    axios.post('http://127.0.0.1:8000/register_domain/',{
+    axios.post('https://brosapp.xyz/register_domain/',{
       domain:addDomain
     })
     .then((response)=>{

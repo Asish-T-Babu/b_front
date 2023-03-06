@@ -33,7 +33,7 @@ function AddBatchModal() {
   const handleClose = () => setOpen(false);
   let {authTokens}=useContext(AuthContext)
     const authAxios = axios.create({
-      baseURL:'http://127.0.0.1:8000',
+      baseURL:'https://brosapp.xyz',
       headers:{
         Authorization:`Bearer ${authTokens.access}`
       },

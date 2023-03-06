@@ -15,7 +15,7 @@ function GroupChats({ filter }) {
   let{groupRoomId,setGroupRoomId,setGroupMessageDetail}=useContext(PostContext)
 
   useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/my_groups/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
+    axios.get(`https://brosapp.xyz/my_groups/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
       setMembers(response.data)
     })
   },[])

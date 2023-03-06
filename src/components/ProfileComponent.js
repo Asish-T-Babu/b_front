@@ -9,7 +9,7 @@ let{authTokens}=useContext(AuthContext)
 function handleSubmit() {
     const formData =new FormData()
     formData.append("photo",photo)
-    axios.put(`http://127.0.0.1:8000/update_profile/${(jwt_decode(authTokens.access).user_id)}`,formData).then((res)=>{
+    axios.put(`https://brosapp.xyz/update_profile/${(jwt_decode(authTokens.access).user_id)}`,formData).then((res)=>{
         console.log(res.data)
     }).catch(err=>{
         console.log(err)

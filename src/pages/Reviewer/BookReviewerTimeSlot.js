@@ -18,7 +18,7 @@ export default function BookReviewerTimeSlot() {
   const slot = ["9:00AM - 10:00AM","10:00AM - 11:00AM","11:00AM - 12:00pmM","12:00pm - 1:00pm","1:00pm - 2:00pm","2:00pm - 3:00pm","3:00pm - 4:00pm","4:00pm - 5:00pm","5:00pm - 6:00pm","6:00pm - 7:00pm","7:00pm - 8:00pm","8:00pm - 9:00pm"]
   useEffect(() => {
     console.log({reviewerTimeSlotDisplayUser}.reviewerTimeSlotDisplayUser)
-    axios.get(`http://127.0.0.1:8000/view_time_reviewer/${id}`).then((response)=>{
+    axios.get(`https://brosapp.xyz/view_time_reviewer/${id}`).then((response)=>{
       setBookSlot(response.data)
     })
 },[reviewerTimeSlotDisplayUser,book])

@@ -57,7 +57,7 @@ console.log("123",editManifest)
 console.log(editManifest.week);
   const handleSubmits=(e)=>{
     console.log(e)
-    axios.put(`http://127.0.0.1:8000/edit_week/${editManifest.id}`,{
+    axios.put(`https://brosapp.xyz/edit_week/${editManifest.id}`,{
       user:manifest,
       week:week,
       status:status,

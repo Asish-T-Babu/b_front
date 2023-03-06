@@ -29,7 +29,7 @@ export default function BasicTable() {
     //   },
     // });
     useEffect(() => {
-      axios.get(`http://127.0.0.1:8000/view_manifest/${manifest}`,{
+      axios.get(`https://brosapp.xyz/view_manifest/${manifest}`,{
       }).then((response)=>{
         console.log(response.data)
         setSelect(response.data.user_manifest)

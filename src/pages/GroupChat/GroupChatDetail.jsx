@@ -24,7 +24,7 @@ function GroupChatDetail() {
   useEffect(()=>{
     console.log(groupRoomId);
     setMessages([])
-    axios.get(`http://127.0.0.1:8000/view_all_messages_of_group/${roomName}`).then((response) => {
+    axios.get(`https://brosapp.xyz/view_all_messages_of_group/${roomName}`).then((response) => {
       console.log(response.data)
       setMessages(response.data)
     })

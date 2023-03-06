@@ -25,7 +25,7 @@ function AdvisorSignup() {
   
   const handleSubmits=(e)=>{
     console.log(e)
-    axios.post('http://127.0.0.1:8000/admin_register',{
+    axios.post('https://brosapp.xyz/admin_register',{
       first_name:name,
       username:username,
       phone:phone,

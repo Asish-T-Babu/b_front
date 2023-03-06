@@ -15,7 +15,7 @@ function AddMembers() {
     const group=9
 
     useEffect(()=>{
-        axios.get(`http://127.0.0.1:8000/add_members_list/${group}`).then((response) => {
+        axios.get(`https://brosapp.xyz/add_members_list/${group}`).then((response) => {
           setMembers(response.data)
         })
       },[groupName])
@@ -35,7 +35,7 @@ function AddMembers() {
       const handleSubmit =()=>{
         const formData =new FormData()
         formData.append("photo",photo)
-        axios.patch(`http://127.0.0.1:8000/AddMembersToChatGroupView/${group}`,{
+        axios.patch(`https://brosapp.xyz/AddMembersToChatGroupView/${group}`,{
             members:selectedOptions,
             // photo:formData
         }).then((response) => {

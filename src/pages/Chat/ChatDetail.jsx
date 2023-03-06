@@ -27,7 +27,7 @@ function ChatDetail() {
   let{authTokens}=useContext(AuthContext)
   useEffect(()=>{
     setMessages([])
-    axios.get(`http://127.0.0.1:8000/view_all_messages/${roomName}`).then((response) => {
+    axios.get(`https://brosapp.xyz/view_all_messages/${roomName}`).then((response) => {
       console.log(response.data)
       setMessages(response.data)
     })

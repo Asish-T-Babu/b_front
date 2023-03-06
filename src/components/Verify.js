@@ -19,7 +19,7 @@ function Verify() {
  const verify1 = ()=>{
     let item = {id:id,username:username}
     console.log('ver',item)
-    axios.post("http://localhost:8000/validate",item).then((response)=>{
+    axios.post("https://brosapp.xyz/validate",item).then((response)=>{
         console.log('verifuuuu',response.data)
         setVerified(response.data)
     })

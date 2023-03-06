@@ -16,7 +16,7 @@ export default function Batch_view() {
     const[batch,setBatch]=React.useState([])
   const {BatchDeleteModalBoolean} = useContext(PostContext)
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/view_all_batch').then((response)=>{
+        axios.get('https://brosapp.xyz/view_all_batch').then((response)=>{
           setBatch(response.data)
         })
     },[BatchDeleteModalBoolean])

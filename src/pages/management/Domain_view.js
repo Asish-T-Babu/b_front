@@ -22,7 +22,7 @@ export default function Domain_view() {
   const [batch, setBatch] = React.useState([])
   const { DomainDeleteModalBoolean } = useContext(PostContext)
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/view_domain').then((response) => {
+    axios.get('https://brosapp.xyz/view_domain').then((response) => {
       setBatch(response.data)
     })
   }, [DomainDeleteModalBoolean])

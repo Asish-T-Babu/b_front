@@ -10,7 +10,7 @@ function View_profile() {
     let{authTokens}=useContext(AuthContext)
     useEffect(() => {
     
-        axios.get(`http://127.0.0.1:8000/view_profile/${(jwt_decode(authTokens.access).user_id)}`,).then((res)=>{
+        axios.get(`https://brosapp.xyz/view_profile/${(jwt_decode(authTokens.access).user_id)}`,).then((res)=>{
         console.log(res.data)
         setUser(res.data)
         setVari(res.data.photo.replace("frontend/src/static/",""))

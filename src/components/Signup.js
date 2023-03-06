@@ -65,7 +65,7 @@ function Signup() {
         }
       )
 
-    axios.get('http://127.0.0.1:8000/view_batch')
+    axios.get('https://brosapp.xyz/view_batch')
     .then((response)=>{
       setSelect(response.data)
       console.log(response.data)
@@ -75,7 +75,7 @@ function Signup() {
 },[]);
   const handleSubmits=(e)=>{
     console.log(e)
-    axios.post('http://127.0.0.1:8000/user_register',{
+    axios.post('https://brosapp.xyz/user_register',{
       first_name:name,
       username:username,
       phone:phone,

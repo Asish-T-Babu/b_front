@@ -22,7 +22,7 @@ export default function Reviewer_view() {
   const {reviewerDeleteModalBoolean,setAddAdmin,addAdmin} = useContext(PostContext)
     const[reviewer,setReviewer]=React.useState([])
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/view_reviewer').then((response)=>{
+        axios.get('https://brosapp.xyz/view_reviewer').then((response)=>{
           setReviewer(response.data)
         })
     },[reviewerDeleteModalBoolean,addAdmin])

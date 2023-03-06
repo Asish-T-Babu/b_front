@@ -8,7 +8,7 @@ function ManagementFields() {
   const [select, setSelect] = useState([]);
   let{advisorManagement,setAdvisorManagent,reviewerManagement,setReviewerManagent,batchManagement,setBatchManagent,domainManagement,setDomainManagent,setAddAdmin}=useContext(PostContext)
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/view_domain')
+    axios.get('https://brosapp.xyz/view_domain')
     .then((response)=>{
       setDomains(response.data)
       console.log(response.data)
@@ -17,7 +17,7 @@ function ManagementFields() {
     })
 },[]);
 const handleClick=(dom)=>{
-    axios.get(`http://127.0.0.1:8000/view_reviewer/${dom}`,{
+    axios.get(`https://brosapp.xyz/view_reviewer/${dom}`,{
     }).then((response)=>{
       console.log(response.data)
       setSelect(response.data)

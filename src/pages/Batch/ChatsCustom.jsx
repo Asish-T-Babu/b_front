@@ -9,7 +9,7 @@ function ChatsCustom() {
   const [select, setSelect] = useState([]);
   let{setManifest,setManifest_display,setAddManifestDisplay,setEditManifestBoolean}=useContext(PostContext)
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/view_batch')
+    axios.get('https://brosapp.xyz/view_batch')
     .then((response)=>{
       setChats(response.data)
       console.log(response.data)
@@ -18,7 +18,7 @@ function ChatsCustom() {
     })
 },[]);
 const handleSubmit=(id)=>{
-  axios.get(`http://127.0.0.1:8000/view_manifest/${id}`,{
+  axios.get(`https://brosapp.xyz/view_manifest/${id}`,{
   }).then((response)=>{
     console.log(response.data)
     setManifest(response.data)

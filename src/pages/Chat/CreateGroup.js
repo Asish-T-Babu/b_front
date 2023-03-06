@@ -54,7 +54,7 @@ function CreateGroup() {
 
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/view_chat/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
+    axios.get(`https://brosapp.xyz/view_chat/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
       setMembers(response.data)
     })
   }, [])
@@ -74,7 +74,7 @@ function CreateGroup() {
   const handleSubmit = () => {
     const formData = new FormData()
     formData.append("photo", photo)
-    axios.post('http://127.0.0.1:8000/create_group/', {
+    axios.post('https://brosapp.xyz/create_group/', {
       name: groupName,
       members: selectedOptions,
       creator: (jwt_decode(authTokens.access).user_id),

@@ -32,7 +32,7 @@ function ReviewerSignup() {
     setCompany(event.target.value);
   };
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/view_domain')
+    axios.get('https://brosapp.xyz/view_domain')
     .then((response)=>{
       setSelect(response.data)
       console.log(response.data)
@@ -42,7 +42,7 @@ function ReviewerSignup() {
 },[]);
   const handleSubmits=(e)=>{
     console.log(e)
-    axios.post('http://127.0.0.1:8000/admin_register',{
+    axios.post('https://brosapp.xyz/admin_register',{
       first_name:name,
       username:username,
       phone:phone,

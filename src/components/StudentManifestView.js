@@ -31,7 +31,7 @@ export default function StudentManifestView() {
     //   },
     // });
     useEffect(() => {
-      axios.get(`http://127.0.0.1:8000/view_manifest/${user}`,{
+      axios.get(`https://brosapp.xyz/view_manifest/${user}`,{
       }).then((response)=>{
         console.log(response.data)
         setSelect(response.data.user_manifest)

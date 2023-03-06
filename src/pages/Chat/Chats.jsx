@@ -15,13 +15,13 @@ function Chats({ filter }) {
   let{roomId,setRoomid,messageDetail,setMessageDetail}=useContext(PostContext)
 
   useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/view_chat/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
+    axios.get(`https://brosapp.xyz/view_chat/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
       setMembers(response.data)
     })
   },[])
 
   function handleClick(id){
-    axios.get(`http://127.0.0.1:8000/create_or_find_room/${(jwt_decode(authTokens.access).user_id)}/${id}`).then((response) => {
+    axios.get(`https://brosapp.xyz/create_or_find_room/${(jwt_decode(authTokens.access).user_id)}/${id}`).then((response) => {
       console.log(response.data);
       setRoomid(response.data)
   })

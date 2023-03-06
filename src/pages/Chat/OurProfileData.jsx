@@ -122,7 +122,7 @@ function ChildModal() {
   let {update_profile,setUpdate_profile}=React.useContext(PostContext)
   const [user, setUser] = React.useState('');
   React.useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/view_profile/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
+    axios.get(`https://brosapp.xyz/view_profile/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
       setUser(response.data)
     })
   },[])
@@ -147,7 +147,7 @@ const[photo,setPhoto]=useState()
     formData.append("username",username)
     formData.append("email",email)
     formData.append("photo",photo)
-    axios.put(`http://127.0.0.1:8000/update_profile/${(jwt_decode(authTokens.access).user_id)}`,formData).then((response)=>{
+    axios.put(`https://brosapp.xyz/update_profile/${(jwt_decode(authTokens.access).user_id)}`,formData).then((response)=>{
       console.log(response.data)
       setName('')
       setUsername('')
@@ -248,7 +248,7 @@ export default function NestedModal() {
   };
   let{authTokens}=React.useContext(AuthContext)
   React.useEffect(()=>{
-    axios.get(`http://127.0.0.1:8000/view_profile/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
+    axios.get(`https://brosapp.xyz/view_profile/${(jwt_decode(authTokens.access).user_id)}`).then((response) => {
       setUser(response.data)
       setVari(response.data.photo)
     })

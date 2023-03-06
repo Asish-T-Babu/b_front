@@ -99,7 +99,7 @@ export default function TransitionsModal() {
     setSuccess(false)
   },[])
   const handlesubmit=(e)=>{
-    axios.post('http://127.0.0.1:8000/otplogin',{
+    axios.post('https://brosapp.xyz/otplogin',{
       phone:phone
     }).then((response)=>{
         
@@ -113,7 +113,7 @@ export default function TransitionsModal() {
     })
   }
   const handlesubmits=(e)=>{
-    axios.post('http://127.0.0.1:8000/otp_verify',{
+    axios.post('https://brosapp.xyz/otp_verify',{
       otp:otp,
       phone:phone
     }).then((response)=>{

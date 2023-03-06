@@ -50,7 +50,7 @@ function AddManifest() {
 // },[]);
   const handleSubmits=(e)=>{
     console.log(e)
-    axios.post('http://127.0.0.1:8000/add_week',{
+    axios.post('https://brosapp.xyz/add_week',{
       user:manifest,
       week:week,
       status:status,
