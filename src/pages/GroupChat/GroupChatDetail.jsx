@@ -32,7 +32,7 @@ function GroupChatDetail() {
   useEffect(() => {
     
     const user =jwt_decode(authTokens.access).user_id
-    socketRef.current = new WebSocket(`ws://brosapp.xyz/ws/groupchat/${roomName}/${user}/`);
+    socketRef.current = new WebSocket(`wss://brosapp.xyz/ws/groupchat/${roomName}/${user}/`);
 
     socketRef.current.onmessage = (event) => {
       // setMessages([...messages, JSON.parse(event.data)]);

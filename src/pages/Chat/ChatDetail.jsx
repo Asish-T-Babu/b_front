@@ -35,7 +35,7 @@ function ChatDetail() {
   useEffect(() => {
     
     const user =jwt_decode(authTokens.access).user_id
-    socketRef.current = new WebSocket(`ws://brosapp.xyz/ws/chat/${roomName}/${user}/`);
+    socketRef.current = new WebSocket(`wss://brosapp.xyz/ws/chat/${roomName}/${user}/`);
 
     socketRef.current.onmessage = (event) => {
       setB(!b)
