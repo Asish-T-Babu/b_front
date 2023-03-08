@@ -19,7 +19,7 @@ import DeleteWeekModal from '../pages/Batch/DeleteWeekModal';
 export default function BasicTable() {
     const {rows,setRows} = useState()
     let {authTokens}=useContext(AuthContext)
-    let{manifest,addRowManifest,setAddManifestDisplay,editManifest,setEditManifest,setEditManifestBoolean}=useContext(PostContext)
+    let{weekdelete,setWeekdelete,manifest,addRowManifest,setAddManifestDisplay,editManifest,setEditManifest,setEditManifestBoolean}=useContext(PostContext)
     const navigate = useNavigate()
     const [select, setSelect] = useState([]);
     
@@ -37,7 +37,7 @@ export default function BasicTable() {
       }).catch((error)=>{
         alert(error.message)
       })
-    },[manifest])
+    },[manifest,weekdelete])
     console.log("hi",manifest);
 
   return (
@@ -66,7 +66,7 @@ export default function BasicTable() {
         <TableBody>
         {select.map((man) => {return(
           <TableRow
-          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}><TableCell ><div className='d-flex'><EditIcon  onClick={()=>{setEditManifest(man);setEditManifestBoolean(true)}} style={{color:'blue'}}/>&nbsp;&nbsp;<DeleteWeekModal/></div> </TableCell >
+          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}><TableCell ><div className='d-flex'><EditIcon  onClick={()=>{setEditManifest(man);setEditManifestBoolean(true)}} style={{color:'blue'}}/>&nbsp;&nbsp;<DeleteWeekModal data={man}/></div> </TableCell >
                <TableCell sx={{minWidth:"100px",maxWidth:"100px"}}>{man.week}</TableCell>
                <TableCell sx={{minWidth:"250px",maxWidth:"250px"}}>{man.status}</TableCell>
                <TableCell sx={{minWidth:"400px",maxWidth:"400px"}}>{man.project_updation}</TableCell>

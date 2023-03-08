@@ -23,7 +23,7 @@ const style = {
   };
 
 function DeleteWeekModal(props) {
-  const {advisorDeleteModalBoolean,setAdvisorDeleteModalBoolean} = useContext(PostContext)
+  const {advisorDeleteModalBoolean,setAdvisorDeleteModalBoolean,weekdelete,setWeekdelete} = useContext(PostContext)
   const [open, setOpen] = React.useState(false);
     
   const handleOpen = () => setOpen(true);
@@ -39,7 +39,7 @@ const handleSubmit=(e)=>{
     e.preventDefault()
     axios.delete(`https://brosapp.xyz/delete_week/${props.data.id}`).then((response)=>{
       console.log(response.data)
-      setAdvisorDeleteModalBoolean(!(advisorDeleteModalBoolean))
+      setWeekdelete(!(weekdelete))
     }).catch((error)=>{
       alert(error.message)
     })

@@ -32,6 +32,8 @@ function CompanyContext({ children }) {
   const [groupMessageDetail,setGroupMessageDetail]=useState()
   // profileUpdate
   const [update_profile,setUpdate_profile]=useState(true)
+
+  const [weekdelete,setWeekdelete]=useState(true)
   return (
     <div>
       <PostContext.Provider value={{
@@ -40,7 +42,7 @@ function CompanyContext({ children }) {
         advisorDeleteModalBoolean, setAdvisorDeleteModalBoolean, reviewerDeleteModalBoolean, setReviewerDeleteModalBoolean, BatchDeleteModalBoolean, setBatchDeleteModalBoolean,
         DomainDeleteModalBoolean, setDomainDeleteModalBoolean, advisorManagement, setAdvisorManagent, reviewerManagement, setReviewerManagent, batchManagement, setBatchManagent,
         domainManagement, setDomainManagent, addAdmin, setAddAdmin, roomId, setRoomid, groupRoomId, setGroupRoomId, messageDetail, setMessageDetail,update_profile,setUpdate_profile,
-        groupMessageDetail,setGroupMessageDetail
+        groupMessageDetail,setGroupMessageDetail,weekdelete,setWeekdelete
       }}>
         {children}
       </PostContext.Provider>
