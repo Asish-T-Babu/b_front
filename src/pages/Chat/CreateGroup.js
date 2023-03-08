@@ -16,6 +16,9 @@ import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import RoundedBtn from "../../components/Common/RoundedBtn";
+
 
 const style = {
   position: 'absolute',
@@ -95,7 +98,8 @@ function CreateGroup() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <button onClick={handleOpen}>
+    <RoundedBtn icon={<GroupAddIcon />} /></button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -104,7 +108,7 @@ function CreateGroup() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+            Create Group
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               <TextField id="outlined-basic" label="Group Name" variant="outlined" value={groupName} onChange={(event) => setGroupName(event.target.value)} style={{width:"100%"}}/>

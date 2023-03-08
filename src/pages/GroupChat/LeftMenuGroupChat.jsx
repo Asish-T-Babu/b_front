@@ -9,6 +9,7 @@ import { BiFilter } from "react-icons/bi";
 import { pp } from "../../assets/whatsapp";
 import { useNavigate } from "react-router-dom";
 import OurProfileData from '../Chat/OurProfileData'
+import CreateGroup from "../Chat/CreateGroup";
 
 function LeftMenuGroupChat() {
   const [filter, setFilter] = useState(false);
@@ -24,9 +25,10 @@ function LeftMenuGroupChat() {
         <OurProfileData/>
 
         {/* Profile nav buttons */}
-        <div className="flex justify-between w-[45px]">
+        <div className="flex justify-between w-[75px]">
           {/* <RoundedBtn icon={<MdPeopleAlt />} />
           <RoundedBtn icon={<TbCircleDashed />} /> */}
+          <CreateGroup/>
         <button onClick={()=>{navigate('/')}}>
           <RoundedBtn icon={<BsFillChatLeftTextFill />} /></button>
           {/* <RoundedBtn icon={<HiDotsVertical />} /> */}

@@ -12,6 +12,7 @@ import ReviewerDeleteModal from './ReviewerDeleteModal';
 import { PostContext } from '../../context';
 import AddIcon from '@mui/icons-material/Add';
 import {AuthContext} from '../../AuthContext';
+import AdvisorUpdateModal from './AdvisorUpdateModal';
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
@@ -54,7 +55,7 @@ export default function Reviewer_view() {
               <TableCell>{row.username}</TableCell>
               <TableCell>{row.email}</TableCell>
               <TableCell>{row.phone}</TableCell>
-              <TableCell><ReviewerDeleteModal data={row}/></TableCell>
+              <TableCell><AdvisorUpdateModal data={row}/>&nbsp;<ReviewerDeleteModal data={row}/></TableCell>
             </TableRow>
           ))}
         </TableBody>

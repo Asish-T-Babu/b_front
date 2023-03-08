@@ -214,7 +214,7 @@ console.log(editManifest.week);
                 fullWidth
                 id="score"
                 label="Score"
-                defaultValue={editManifest.week} onChange={(e)=>setTechinicalScore(e.target.value)}
+                defaultValue={editManifest.techinical_score} onChange={(e)=>setTechinicalScore(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -225,7 +225,7 @@ console.log(editManifest.week);
                 fullWidth
                 id="extra_workouts_review"
                 label="Extra Workouts Review"
-                defaultValue={editManifest.week} onChange={(e)=>setExtraWorkoutsReview(e.target.value)}
+                defaultValue={editManifest.extra_workouts_review} onChange={(e)=>setExtraWorkoutsReview(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -235,7 +235,7 @@ console.log(editManifest.week);
                 fullWidth
                 id="extra_workouts_score"
                 label="Extra Workouts Score"
-                defaultValue={editManifest.week} onChange={(e)=>setExtraWorkoutsScore(e.target.value)}
+                defaultValue={editManifest.extra_workouts_score} onChange={(e)=>setExtraWorkoutsScore(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -246,7 +246,7 @@ console.log(editManifest.week);
                 fullWidth
                 id="english_review"
                 label="English Review"
-                defaultValue={editManifest.week} onChange={(e)=>setEnglishReview(e.target.value)}
+                defaultValue={editManifest.english_review} onChange={(e)=>setEnglishReview(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -255,7 +255,7 @@ console.log(editManifest.week);
                 fullWidth
                 id="english_score"
                 label="English Score"
-                defaultValue={editManifest.week} onChange={(e)=>setEnglishScore(e.target.value)}
+                defaultValue={editManifest.english_score} onChange={(e)=>setEnglishScore(e.target.value)}
               />
             </Grid>
           </Grid>

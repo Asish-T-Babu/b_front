@@ -13,6 +13,7 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import DeleteWeekModal from '../pages/Batch/DeleteWeekModal';
 
 
 export default function BasicTable() {
@@ -45,7 +46,7 @@ export default function BasicTable() {
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-          <TableCell onClick={()=>{setAddManifestDisplay(!(addRowManifest))}} sx={{minWidth:"10px",maxWidth:"10px"}}><AddIcon/></TableCell>
+          <TableCell onClick={()=>{setAddManifestDisplay(!(addRowManifest))}} sx={{minWidth:"10px",maxWidth:"10px"}}>&nbsp;&nbsp;&nbsp;&nbsp;<AddIcon/></TableCell>
             <TableCell sx={{minWidth:"100px",maxWidth:"100px"}}>Week</TableCell>
             <TableCell sx={{minWidth:"250px",maxWidth:"250px"}}>Status</TableCell>
             <TableCell sx={{minWidth:"400px",maxWidth:"400px"}}>Project Updation</TableCell>
@@ -65,8 +66,7 @@ export default function BasicTable() {
         <TableBody>
         {select.map((man) => {return(
           <TableRow
-          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell onClick={()=>{setEditManifest(man);setEditManifestBoolean(true)}}><EditIcon/></TableCell>
+          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}><TableCell ><div className='d-flex'><EditIcon  onClick={()=>{setEditManifest(man);setEditManifestBoolean(true)}} style={{color:'blue'}}/>&nbsp;&nbsp;<DeleteWeekModal/></div> </TableCell >
                <TableCell sx={{minWidth:"100px",maxWidth:"100px"}}>{man.week}</TableCell>
                <TableCell sx={{minWidth:"250px",maxWidth:"250px"}}>{man.status}</TableCell>
                <TableCell sx={{minWidth:"400px",maxWidth:"400px"}}>{man.project_updation}</TableCell>

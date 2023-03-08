@@ -14,6 +14,7 @@ import AdvisorDeleteModal from './AdvisorDeleteModal';
 import { PostContext } from '../../context';
 import AddIcon from '@mui/icons-material/Add';
 import {AuthContext} from '../../AuthContext';
+import AdvisorUpdateModal from './AdvisorUpdateModal';
 
 
 export default function Advisor_view() {
@@ -51,7 +52,7 @@ export default function Advisor_view() {
               <TableCell>{row.username}</TableCell>
               <TableCell>{row.email}</TableCell>
               <TableCell>{row.phone}</TableCell>
-              <TableCell><AdvisorDeleteModal data={row}/></TableCell>
+              <TableCell><AdvisorUpdateModal data={row}/>&nbsp;<AdvisorDeleteModal data={row}/></TableCell>
             </TableRow>
           ))}
         </TableBody>
